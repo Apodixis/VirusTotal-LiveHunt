@@ -1,3 +1,5 @@
+import "vt"
+
 rule GitHubUrlExecution { //Matches for files containing previously identified methods of encoded URLs which are then queried to receive a payload that is dynamically executed 
     meta:
         source1 = "https://github.com/njkr/goldencity/blob/main/server/controllers/userController.js"

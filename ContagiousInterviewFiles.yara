@@ -6,7 +6,7 @@ rule File_Contacts_Beavertail_Ferret_URL { // Looks for commonly observed domain
         date = "MAR2025"
         description = "Contagious Interview malware frequently reuses malicious domain page structures"
         threat_actor = "Lazarus Group"
-        family = "N/A"
+        family = "BeaverTail / FERRET"
         variant = "N/A"
         target_entity = "file"
 

@@ -15,9 +15,9 @@ rule Kimsuky_Login_Pages_HTML { // Looks for unobfuscated Kimsuky Login Pages
         $ajax1 = /\$\.ajax\(\{\)/
         $ajax2 = /type\: [\`\'\"]POST[\`\'\"]/
         $ajax3 = /url\: [a-zA-Z0-9]{1,20}/
-        $ajax4 = /crossDomain\: [Tt][Rr][Uu][Ee]/
+        $ajax4 = /crossDomain\: true/i
         $ajax5 = /data\: \$\([\`\'\"][a-zA-Z0-9]{1,20}[\`\'\"]\)\.serialize\(\)/
-        $AJAX = /\$\.ajax\(\{type\:\\[\`\'\"][Pp](OST|ost)\\[\`\'\"]\, ?url\:\w\, ?crossDomain\:\!0\, ?data\:\$\(\\[\`\'\"]form\\[\`\'\"]\)\.serialize\(\)\, ?beforeSend\:function\(\w\)/
+        $AJAX = /\$\.ajax\(\{type\:\\[\`\'\"]post\\[\`\'\"]\, ?url\:\w\, ?crossDomain\:\!0\, ?data\:\$\(\\[\`\'\"]form\\[\`\'\"]\)\.serialize\(\)\, ?beforeSend\:function\(\w\)/i
 
         $emailSlice1 = /var [a-zA-Z0-9]{1,20} ?\= ? [a-zA-z0-9\-\_]{1,20}\.substr\({1,5}ind ?\+ ?\d\){1,5}/
         $emailSlice2 = /var [a-zA-Z0-9]{1,20} ?\= ? [a-zA-z0-9\-\_]{1,20}\.substr\(0\, [a-zA-z0-9\-\_]{1,20}\.indexof\({1,5}[\`\'\"]\.[\`\'\"]\){1,5}/
